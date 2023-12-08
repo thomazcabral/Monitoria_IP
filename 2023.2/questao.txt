@@ -1,0 +1,90 @@
+Com o Carnaval bombando no Brasil inteiro, os foliões precisam organizar suas fantasias com certa antecedência e um dos adereços mais utilizados no melhor feriado do país são as **máscaras de carnaval**. Entretanto, muitas pessoas estão instatisfeitas com as máscaras que possuem e precisam trocar com a das outros foliões para que todos consigam festejar da melhor maneira. Para que cada pessoa tenha a melhor fantasia possível, após as trocas, será feita uma avaliação das máscaras e que a melhor vença! Dessa forma, cabe a você, calouro e folião, organizar essas trocas e manter a energia de carnaval maravilhosa no Brasil!
+
+![](https://media.giphy.com/media/UW22385EolpwqE4gPZ/giphy.gif)
+
+**É imprescindível a utilização de dicionários nesta questão.** Boas festas!!
+
+- A primeira linha corresponde à quantidade de indivíduos que irão participar da troca de máscaras:
+
+> {numero_pessoas}
+> 
+- As próximas N linhas serão o nome das pessoas, seguido pelo nome da sua máscara e a cor dela da seguinte maneira:
+
+> {nome_pessoa} -> {nome_mascara}: {cor_mascara}
+> 
+- Também deve ser informado o número total de trocas permitido por máscara:
+
+> {numero_mascaras}
+> 
+
+A partir da próxima entrada, já ocorrerão as trocas de máscaras. É importante notar que cada máscara tem um nível, inicialmente 0, mas que aumenta uma unidade a cada troca realizada em que ela esteja envolvida. As seguintes ações podem ser realizadas durante esse período:
+
+- Troca da máscara da pessoa 1 com a pessoa 2
+
+> {pessoa_1} <-> {pessoa_2}
+> 
+- Evento especial: chuva de máscaras, em que as pessoas que possuírem máscaras de nível ímpar podem trocar por uma máscara especial de nível a ser informado. A troca ocorrerá somente se a nova máscara tiver nível igual ou maior que a anterior. Nesse caso, a máscara é simplesmente substituída por outra de nível arbitrário. (A cor da máscara permanece a mesma e isso conta como uma troca):
+
+> Evento especial!!! Chuva de máscaras -> {nome_mascara_especial}: {nivel_mascara_especial}
+> 
+- Durante as trocas, pode ser pedido que apareça uma mensagem informando quantas pessoas estão com uma máscara de uma determinada cor:
+
+> Temos máscaras de cor {cor_mascara}?
+> 
+- As trocas devem ocorrer até que haja essa entrada:
+
+> FIM
+> 
+
+**Obs.: caso o folião troque de máscara com outra de nível superior, sua pontuação deve ser incrementada em 2 unidades. Caso seja por uma de nível inferior, ele deve perder 1 ponto. Se a pontuação em algum momento for negativa, ela se transformará em 0. O folião também não trocará máscara consigo mesmo.**
+
+- Caso uma troca tente ser realizada com uma máscara que já foi trocada o número máximo de vezes, o seguinte deve ser exibido (caso as duas máscaras tenham estourado o número, deve aparecer o nome da que vier primeiro na ordem alfabética):
+
+> Eita, amigo, tas preso com a {nome_mascara}, visse? Pode trocar mais ela não.
+> 
+- Caso alguém tente realizar uma troca com uma pessoa inexistente, a seguinte mensagem deve aparecer:
+
+> Esse cara aí não existe não…
+> 
+- Sempre que ocorrer eventos especiais, exiba uma mensagem informando qual foi o evento e quais foliões foram beneficiados na ordem em que eles foram adicionados no início:
+
+> Arretaaado demais!! Teve um evento maneiro aqui e {pessoa_1}, {pessoa_2}, {...}, {pessoa_n} foram beneficiados.
+> 
+- Caso ninguém seja beneficiado no evento especial, exiba:
+
+> Vixe... Serviu pra nada o evento Chuva de máscaras :/
+> 
+- Caso só uma pessoa seja beneficiado pelo evento especial, exiba o seguinte:
+
+> Apenas {nome_pessoa} é que aproveitou mesmo o evento Chuva de máscaras.
+> 
+- Se, em algum momento, a pontuação de um folião se torne 0, exiba a seguinte mensagem:
+
+> {nome_pessoa} ficou negativo!!! Bora que dá pra melhorar.
+> 
+- Quando for pedida a informação de quantas pessoas estão com uma máscara de determinada cor, o seguinte deve aparecer:
+
+> Um total de {numero_pessoas} pessoa(s) está(o) com máscara de cor {cor_mascara}!
+> 
+- No fim das trocas, mostre a máscara e o nível dela de cada pessoa em ordem alfabética relativa ao nome do folião:
+
+> Agora é hora de ver quem ficou com que máscara!
+> 
+> 
+> {nome_pessoa_1} -> {nome_mascara_1}: {nível_mascara_1}
+> 
+> {nome_pessoa_2} -> {nome_mascara_2}: {nível_mascara_2}
+> 
+> ...
+> 
+- Posteriormente, mostre o vencedor da seguinte maneira (caso haja empate em número de pontos, a decisão será pelo maior nível da máscara atual e depois pela ordem alfabética):
+
+> O grande vencedor dessa competição foi {nome_pessoa} com {qntd_pontos} pontos!!! Com uma diferença de {qntd_pontos} ponto(s) do segundo colocado.
+> 
+
+Note que a pontuação é calculada da seguinte maneira: pontos = {nivel_mascara} * 3 + {pontuacao_extra}.
+
+- Ao finalizar, exiba a seguinte mensagem:
+
+> Troca de máscaras encerrada! Esperamos que todos tenham se divertido!
+>
