@@ -1,0 +1,47 @@
+O esporte mais amado do país está chegando ao Centro de Informática! E é claro que os **professores** não querem ficar de fora e, para isso, eles organizaram uma competição de futebol entre times convocados pelos docentes. 
+Mas, como eles já possuem muito trabalho em suas mãos, eles precisam da ajuda de você, calouro, a montar estatísticas deste torneio maluco e criar a classificação desse campeonato. 
+Para isso, os times dos professores participarão das partidas e informarão a você o placar delas. É importante considerar que cada vitória vale 3 pontos, um empate vale 1 ponto e uma derrota vale 0 pontos. **É imprescindível a utilização de dicionários e de funções na questão.**
+
+- A primeira linha de entrada deve conter o nome do torneio.
+- Em seguida, as linhas de entrada deverão informar os jogos e os placares da seguinte maneira:
+> Time 1  
+> Time 2  
+> Placar do Time 1  
+> Placar do Time 2  
+
+- Os jogos serão computados até ser digitada a mensagem **"FIM"**, que deverá encerrar a competição e exibir estatísticas do torneio.
+
+Primeiramente, as seguintes situações devem ser checadas em todas as partidas:
+- Caso o placar do jogo seja 0 a 0, a seguinte mensagem deve ser exibida:
+> Que partida terrível! Era melhor ter visto o filme do Pelé. Nenhum gol entre a equipe {Time 1} e {Time 2}.  
+
+- Caso haja uma goleada na partida, ou seja, uma diferença de 3 gols ou mais entre as duas equipes, a seguinte mensagem deve ser exibida:
+> Que jogo animado! Menos para a equipe {Time perdedor}, que foi amassada pela equipe {Time vencedor}.  
+
+- Caso haja menos de 2 gols na partida, a seguinte mensagem deve ser exibida:
+> Que sono... Nem consegui ver o jogo direito.  
+
+- Caso haja mais de 4 gols na partida, a seguinte mensagem deve ser exibida:
+> É GOL QUE NÃO ACABA MAIS!!! Que jogo maravilhoso entre as equipes!  
+
+Também deve imprimir uma mensagem informando a melhor defesa do campeonato e o melhor ataque da seguinte maneira:
+> Melhor defesa: {Time que sofreu menos gols}  
+> Melhor ataque: {Time que fez mais gols}  
+
+Caso haja empate, o desempate é através da ordem alfabética.
+
+Por último, a classificação deve ser criada da seguinte forma:
+> Classificação do torneio {nome do torneio}:  
+> Time&nbsp;&nbsp;&nbsp;&nbsp;Pontos&nbsp;&nbsp;&nbsp;&nbsp;Saldo de gols  
+> 1.Time 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3  
+> 2.Time 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0  
+> 3.Time 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-3  
+
+Os critérios para a classificação são os seguintes:
+1. Maior pontuação
+2. Maior saldo de gols
+3. Maior número de vitórias
+4. Ordem alfabética
+
+Por fim, a seguinte mensagem deve ser exibida a fim de informar o grande vencedor do torneio:
+> O grande vencedor da competição foi: {Time campeão}
